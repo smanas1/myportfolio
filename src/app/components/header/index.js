@@ -13,7 +13,7 @@ export default function Header() {
           </ul>
           <ul className="flex gap-8">
             <li className="text-[#2d2e32] text-[17px] font-bold transition-[all .23s] hover:text-[#147efb]">
-              <Link href={"/"}>Home</Link>
+              <Link href={"#home"}>Home</Link>
             </li>
             <li className="text-[#2d2e32] text-[17px] font-bold transition-[all .23s] hover:text-[#147efb]">
               <Link href={"/"}>About</Link>
