@@ -16,7 +16,7 @@ export default function Header() {
               <Link href={"#home"}>Home</Link>
             </li>
             <li className="text-[#2d2e32] text-[17px] font-bold transition-[all .23s] hover:text-[#147efb]">
-              <Link href={"/"}>About</Link>
+              <Link href={"#about"}>About</Link>
             </li>
             <li className="text-[#2d2e32] text-[17px] font-bold transition-[all .23s] hover:text-[#147efb]">
               <Link href={"/"}>Projects</Link>

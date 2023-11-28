@@ -34,3 +34,47 @@
   -webkit-transform: translateY(-1rem);
   transform: translateY(-1rem);
 }
+
+.background-moving {
+  animation-name: backgroundMovingEffect;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes backgroundMovingEffect {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  50% {
+    transform: translate3d(-30px, -30px, -30px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.banner-particle-one {
+  top: -60px;
+  left: -80px;
+  width: 70px;
+  animation: floatUpDown 3s infinite ease-in-out;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
