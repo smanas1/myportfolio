@@ -19,3 +19,18 @@
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+
+.myskill li {
+  cursor: pointer;
+}
+
+.skilltech ul li img {
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  width: 110px;
+}
+
+.skilltech ul li img:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+}
