@@ -3,9 +3,7 @@ import React from "react";
 
 import Image from "next/image";
 import aboutImage from "@/app/images/aboutbg.jpg";
-import downloadFile from "@/app/images/download.png";
-import files from "../resume/mypdf.pdf";
-// import pdf from "@/app/components/resume/akashsarker.pdf";
+
 import aboutEffect from "@/app/images/particleOne.png";
 import { Mulish, Poppins } from "next/font/google";
 import Link from "next/link";
@@ -74,16 +72,13 @@ export default function About() {
               a team player who thrives in collaborating with cross-functional
               teams to produce outstanding web applications.
             </p>
-            <Link
-              href={files}
-              c="true"
-              download="mypdf.pdf"
+            <a
+              href="/mypdf.pdf"
+              download={"mypdf.pdf"}
               className="inline-block px-5 py-3 rounded-md bg-orange-500 text-white font-bold mt-4"
+              type="text/html"
             >
               Download My CV
-            </Link>
-            <a href={files} download={"mypdf"}>
-              pdf
             </a>
           </div>
         </div>
