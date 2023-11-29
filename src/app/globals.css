@@ -75,6 +75,10 @@
   }
 }
 
+.aboutImage img {
+  height: 409px !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
