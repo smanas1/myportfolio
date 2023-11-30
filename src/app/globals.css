@@ -82,3 +82,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+.resume-topics::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #929292;
+  display: inline-block;
+}
