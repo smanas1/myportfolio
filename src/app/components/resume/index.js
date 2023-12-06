@@ -1,26 +1,28 @@
 import React from "react";
-import orangeDot from "@/app/images/orangeDot.png";
-import Image from "next/image";
-import { Jost } from "next/font/google";
-const jost = Jost({
-  subsets: ["latin-ext"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-export default function MyResume() {
+
+import resumeData from "@/../public/mypdf.pdf";
+
+export default function MyResumeDownload() {
+  const handleDownload = () => {
+    const blob = new Blob([resumeData], { type: "application/pdf" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "mypdf.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="bg-[#FFF5EF]">
-      <div className="container mx-auto max-w-[1320px] px-[40px] py-32">
-        <div className="flex justify-center items-center">
-          <Image src={orangeDot} width={18} height={18} alt="orenageDot" />
-          <p className={jost.className + " ml-2 text-[16px] text-black"}>
-            My Resume
-          </p>
-        </div>
-        <h2 className="font-bold text-5xl text-center mt-4">
-          1+ YEARS OF EXPERIENCE
-        </h2>
-        <div className="mt-[50px] flex flex-wrap"></div>
-      </div>
+    <div>
+      <button
+        onClick={handleDownload}
+        className="inline-block px-5 py-3 rounded-md bg-orange-500 text-white font-bold mt-4"
+      >
+        Download My CV
+      </button>
     </div>
   );
 }

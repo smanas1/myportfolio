@@ -6,7 +6,8 @@ import aboutImage from "@/app/images/aboutbg.jpg";
 
 import aboutEffect from "@/app/images/particleOne.png";
 import { Mulish, Poppins } from "next/font/google";
-import Link from "next/link";
+
+import MyResumeDownload from "../resume";
 
 const poppins = Poppins({
   subsets: ["latin-ext"],
@@ -19,10 +20,6 @@ const mulish = Mulish({
 });
 
 export default function About() {
-  // const react_app_client_URL = "http://localhost:3000/";
-  // const handleClick = () => {
-  //   FileSaver.saveAs(react_app_client_URL + mypdf, "myCV.pdf");
-  // };
   return (
     <>
       <div className="max-w-[1070px] mx-auto">
@@ -72,14 +69,8 @@ export default function About() {
               a team player who thrives in collaborating with cross-functional
               teams to produce outstanding web applications.
             </p>
-            <a
-              href="/mypdf.pdf"
-              download={"mypdf.pdf"}
-              className="inline-block px-5 py-3 rounded-md bg-orange-500 text-white font-bold mt-4"
-              type="text/html"
-            >
-              Download My CV
-            </a>
+
+            <MyResumeDownload />
           </div>
         </div>
       </div>
