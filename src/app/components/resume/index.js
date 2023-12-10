@@ -1,5 +1,4 @@
 import React from "react";
-
 import resumeData from "@/../public/mypdf.pdf";
 
 export default function MyResumeDownload() {
@@ -19,7 +18,7 @@ export default function MyResumeDownload() {
     <div>
       <button
         onClick={handleDownload}
-        className="inline-block px-5 py-3 rounded-md bg-orange-500 text-white font-bold mt-4"
+        className="inline-block px-5 py-3 rounded-md bg-orange-500 transition-all hover:bg-[#FFAD84] text-white font-bold mt-4"
       >
         Download My CV
       </button>
