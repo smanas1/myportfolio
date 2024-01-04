@@ -91,3 +91,16 @@ html {
   background-color: #929292;
   display: inline-block;
 }
+
+.projecthover:hover img {
+  animation: projectdown 10s ease-in-out 0s;
+}
+
+@keyframes projectdown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-83%);
+  }
+}
