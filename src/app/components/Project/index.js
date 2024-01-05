@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Mulish, Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,23 +7,35 @@ import { GoLinkExternal } from "react-icons/go";
 import projectCarRental from "@/app/images/portfolioimage/car-rental.webp";
 import projectGym from "@/app/images/portfolioimage/gymate.webp";
 import projectEcom from "@/app/images/portfolioimage/ecommerce.webp";
+import ExternalLink from "../LinkExternal";
+import MainTitle from "../maintitle";
 
 const poppins = Poppins({
   subsets: ["latin-ext"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 export default function Project() {
+  const mb = {
+    marginBottom: "60px",
+  };
   return (
     <>
-      <div className="bg-[#f9f9f9] py-[150px] px-0">
-        <div id="project" className="max-w-[1070px] mx-auto">
+      <div id="project" className="bg-[#f9f9f9] py-[150px] px-0">
+        <div className="max-w-[1070px] mx-auto">
           <div className={poppins.className}>
-            <p className="font-poppins text-[17px] text-[#147efb] font-bold uppercase">
+            <MainTitle
+              textOne=" Each project is a unique piece of development 🧩"
+              textTwo="based in Dhaka, Bangladesh 📍"
+              style={mb}
+            >
               portfolio
-            </p>
-            <h3 className="text-[25px] text-[#2d2e32] font-bold mb-[60px] ">
-              Each project is a unique piece of development 🧩
-            </h3>
+            </MainTitle>
+            <h3 className="text-[25px] text-[#2d2e32] font-bold mb-[60px] "></h3>
             <div className="grid grid-cols-1 grid-rows-auto gap-[50px] h-auto w-full">
               {/* project one */}
               <div className="bg-white rounded-lg shadow-md flex">
@@ -41,19 +53,24 @@ export default function Project() {
                     <h3 className="items-center text-[#2d2e32] font-bold flex text-[17px] uppercase gap-[2px] justify-center mb-8 relative">
                       Car Rental
                       <span class="text-[#433d3d] text-[14px] ml-[2px]">
-                        (February 2023)
+                        (March 2023)
                       </span>
                       🚗
                     </h3>
 
-                    <p class="text-[#767676] text-[17px] font-semibold text-center">
+                    <p
+                      className={
+                        mulish.className +
+                        "text-[#767676] text-[17px] font-semibold text-center"
+                      }
+                    >
                       A car rental website is an online platform that allows
                       users to rent cars for personal or business use. The
                       website provides an interface for searching, comparing,
                       and reserving cars.
                     </p>
                     <div className="flex gap-[10px] justify-center mt-[10px]">
-                      <p className="text-[17px] text-center font-bold bg-white shadow-md text-black py-[10px] px-[13px]">
+                      <p className="text-[17px]  text-center font-bold bg-white shadow-md text-black py-[10px] px-[13px]">
                         React
                       </p>
                       <p className="text-[17px] text-center font-bold bg-white shadow-md text-black py-[10px] px-[13px]">
@@ -63,15 +80,15 @@ export default function Project() {
                     <div className="flex items-center justify-evenly">
                       <Link
                         href=""
-                        className="mt-[30px] mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
                         Code <FiGithub fontSize={24} />
                       </Link>
                       <Link
                         href=""
-                        className="mt-[30px] ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
-                        Live Demo <GoLinkExternal fontSize={24} />
+                        Live Demo <ExternalLink />
                       </Link>
                     </div>
                   </div>
@@ -93,12 +110,17 @@ export default function Project() {
                     <h3 className="items-center text-[#2d2e32] font-bold flex text-[17px] uppercase gap-[2px] justify-center mb-8 relative">
                       Car Rental
                       <span class="text-[#433d3d] text-[14px] ml-[2px]">
-                        (February 2023)
+                        (July 2023)
                       </span>
                       🚗
                     </h3>
 
-                    <p class="text-[#767676] text-[17px] font-semibold text-center">
+                    <p
+                      className={
+                        mulish.className +
+                        "text-[#767676] text-[17px] font-semibold text-center"
+                      }
+                    >
                       A car rental website is an online platform that allows
                       users to rent cars for personal or business use. The
                       website provides an interface for searching, comparing,
@@ -115,15 +137,15 @@ export default function Project() {
                     <div className="flex items-center justify-evenly">
                       <Link
                         href=""
-                        className="mt-[30px] mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
                         Code <FiGithub fontSize={24} />
                       </Link>
                       <Link
                         href=""
-                        className="mt-[30px] ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
-                        Live Demo <GoLinkExternal fontSize={24} />
+                        Live Demo <ExternalLink />
                       </Link>
                     </div>
                   </div>
@@ -145,12 +167,17 @@ export default function Project() {
                     <h3 className="items-center text-[#2d2e32] font-bold flex text-[17px] uppercase gap-[2px] justify-center mb-8 relative">
                       Car Rental
                       <span class="text-[#433d3d] text-[14px] ml-[2px]">
-                        (February 2023)
+                        (November 2023)
                       </span>
                       🚗
                     </h3>
 
-                    <p class="text-[#767676] text-[17px] font-semibold text-center">
+                    <p
+                      className={
+                        mulish.className +
+                        "text-[#767676] text-[17px] font-semibold text-center"
+                      }
+                    >
                       A car rental website is an online platform that allows
                       users to rent cars for personal or business use. The
                       website provides an interface for searching, comparing,
@@ -167,15 +194,15 @@ export default function Project() {
                     <div className="flex items-center justify-evenly">
                       <Link
                         href=""
-                        className="mt-[30px] mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all mr-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
                         Code <FiGithub fontSize={24} />
                       </Link>
                       <Link
                         href=""
-                        className="mt-[30px] ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
+                        className="mt-[30px] hover:text-[#147efb] transition-all ml-[15px] text-[#2d2e32] text-[17px] font-semibold gap-[5px] flex items-center"
                       >
-                        Live Demo <GoLinkExternal fontSize={24} />
+                        Live Demo <ExternalLink />
                       </Link>
                     </div>
                   </div>

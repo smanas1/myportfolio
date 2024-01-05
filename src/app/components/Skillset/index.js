@@ -8,17 +8,17 @@ const mulish = Mulish({
 });
 export default function SkillSet() {
   return (
-    <div className="skilltech flex items-center text-[#767676] text-[1.7rem] absolute bottom-0 left-0">
+    <div className="skilltech flex flex-col justify-center md:flex-row items-center text-[#767676] text-[1.7rem] static md:absolute md:bottom-0 md:left-0">
       <p
         className={
           mulish.className +
-          " text-[17px] text-[#2d2e32] border-r-[2px] border-solid border-[rgba(45,46,50,0.5)] font-extrabold mr-[70px] pr-5  "
+          " text-[17px] text-[#2d2e32] border-b-[2px] md:border-b-0 mb-[30px] md:mb-0 md:border-r-[2px] border-solid border-[rgba(45,46,50,0.5)] font-extrabold md:mr-[70px] pr-5 "
         }
       >
         Tech Stack
       </p>
       <div>
-        <ul className="myskill flex flex-wrap gap-[30px] list-none">
+        <ul className="myskill justify-center md:justify-normal flex flex-wrap gap-[30px] list-none">
           <li>
             <Image
               src="https://skillicons.dev/icons?i=html,css"
