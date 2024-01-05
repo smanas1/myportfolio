@@ -33,7 +33,7 @@ export default function HomeMain() {
     <>
       <div
         id="home"
-        className="bg-[#F9F9F9] py-[110px] md:py-0 flex flex-col h-screen w-full"
+        className="bg-[#F9F9F9] py-[110px] md:py-0 flex flex-col md:h-screen w-full"
       >
         <div className="container mx-auto max-w-[1070px] px-[17px] md:px-[40px]">
           <div className="flex flex-col md:flex-row-reverse md:items-center h-auto text-center md:h-[650px] gap-[30px] md:gap-[100px] relative">
